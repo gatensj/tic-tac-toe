@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Play classic Tic-Tac-Toe game">
+        <meta name="theme-color" content="#000000">
+
+        <title>Tic-Tac-Toe</title>
+
+        <link rel="stylesheet" href="css/tac-style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            
+			<h1>Tic-Tac-Toe</h1>
+
+            <div class="scoreboard">
+                <h3><u id="X">You</u><div id="player-score">0</div></h3>
+                <h3><u>Draws</u><div id="game-draws">0</div></h3>
+                <h3><u id="O">Computer</u><div id="computer-score">0</div></h3>
+            </div>
+
+            <div class="play-area">
+                <div id="0" class="block"></div>
+                <div id="1" class="block"></div>
+                <div id="2" class="block"></div>
+                <div id="3" class="block"></div>
+                <div id="4" class="block"></div>
+                <div id="5" class="block"></div>
+                <div id="6" class="block"></div>
+                <div id="7" class="block"></div>
+                <div id="8" class="block"></div>
+            </div>
+
+            <h2 id="winner" style="display:show;">Good luck ;)</h2>
+            <button onclick="startGame()">Reset</button>
+        </div>
+		<div style="display: none">
+			<input type="radio" id="ai" name="game_mode" onchange="startGame(); resetScore();" value="ai" checked>
+			<input type="radio" id="friend" name="game_mode" onchange="startGame(); resetScore();" value="friend">
+			<span href="javascript:void(0)" id="share" class="link"></span>
+		</div>
+		<div>
+			<script src="scripts/game.js"></script>
+		</div>
+    </body>
+</html>
